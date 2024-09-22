@@ -11,9 +11,9 @@ const durationTime = document.querySelector('.duration-time');
 
 const allSongs = ['music/next-semestr.mp3', 'music/lavish.mp3', 'music/midwest-indigo.mp3']
 const allSongsNames = ['Next Semestr', 'Lavish', 'Midwest Indigo'];
-const allSongsImg = ['img/next-semestr-img.jpg',
-                    'img/lavish-img.jpg',
-                    'img/midwest-indigo-img.jpg'];
+const allSongsImg = ['img/player-img01.jpg',
+                    'img/player-img02.jpg',
+                    'img/player-img03.jpg'];
 
 let isPlay = false;
 let playNum = 0;
