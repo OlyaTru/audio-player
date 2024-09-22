@@ -9,7 +9,9 @@ const progressBar = document.querySelector('.progress-bar-range');
 const currentTime = document.querySelector('.current-time');
 const durationTime = document.querySelector('.duration-time');
 
-const allSongs = ['music/next-semestr.mp3', 'music/lavish.mp3', 'music/midwest-indigo.mp3']
+const allSongs = ['music/next-semestr.mp3',
+                'music/lavish.mp3',
+                'music/midwest-indigo.mp3']
 const allSongsNames = ['Next Semestr', 'Lavish', 'Midwest Indigo'];
 const allSongsImg = ['img/player-img01.jpg',
                     'img/player-img02.jpg',
