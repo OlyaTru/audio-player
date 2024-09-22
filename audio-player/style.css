@@ -24,6 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 0.7rem;
 }
 
 .player-title {
@@ -43,7 +44,7 @@ hr {
 
 .song-img {
     width: 90%;
-    height: 200px;
+    height: 300px;
     border-radius: 0.5rem;
     background-image: url(img/next-semestr-img.jpg);
     background-size: cover;
@@ -63,6 +64,66 @@ hr {
 
 .song-name {
     font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.progress-container {
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar-range {
+    width: 90%;
+    height: 0.5rem;
+    appearance: none;
+    outline: none;
+    overflow: hidden;
+    background: #f2de2f;
+    border-radius: 10px;
+    border: 1px solid #f2de2f;
+    box-shadow: 0 0 5px #f2de2f;
+}
+
+.progress-bar-range::-webkit-slider-thumb {
+    height: 0.5rem;
+    width: 0.9rem;
+    background: rgb(45, 45, 45);
+    appearance: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: -200px 0 0 185px rgb(104, 92, 17);
+    border: 0;
+}
+
+.progress-bar-range::-moz-range-thumb {
+    height: 0.7rem;
+    width: 1.2rem;
+    background: #f2de2f;
+    appearance: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: -200px 0 0 185px rgb(104, 92, 17);
+    border: 0;
+}
+
+.progress-bar-time {
+    width: 85%;
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-bar-time > div {
+    font-size: 0.5rem;
+    font-style: italic;
+    color: #f2de2f;
 }
 
 .buttons-container {
@@ -80,6 +141,13 @@ hr {
     background-image: url(img/prew-button.png);
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.prew-btn:hover {
+    background-image: url(img/prew-button-hover.png);
+    transform: scale(1.04);
 }
 
 .play-btn {
@@ -88,6 +156,23 @@ hr {
     background-image: url(img/play-button.png);
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.play-btn:hover {
+    background-image: url(img/play-button-hover.png);
+    transform: scale(1.04);
+}
+
+.play-btn.pause {
+    background-image: url(img/pause-button.png);
+    transition: all ease-in-out 0.3s;
+}
+
+.play-btn.pause:hover {
+    background-image: url(img/pause-button-hover.png);
+    transform: scale(1.04);
 }
 
 .next-btn {
@@ -96,6 +181,13 @@ hr {
     background-image: url(img/next-button.png);
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.next-btn:hover {
+    background-image: url(img/next-button-hover.png);
+    transform: scale(1.04);
 }
 
 footer {

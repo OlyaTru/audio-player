@@ -9,24 +9,28 @@
 <body>
     <div class="wrapper-body">
         <div class="player">
-            <div class="player-title">Clancy Player</div>
+            <h1 class="player-title">Clancy Player</h1>
             <hr>
             <div class="song-img"></div>
             <div class="artist-name">Twenty One Pilots</div>
             <div class="song-name">Next Semestr</div>
+            <audio class="current-song" src="music/next-semestr.mp3">
+                <source src="music/next-semestr.mp3" type="audio/mp3">
+                <source src="music/lavish.mp3" type="audio/mp3">
+                <source src="music/midwest-indigo.mp3" type="audio/mp3">
+            </audio>
             <div class="progress-container">
                 <div class="progress-bar">
                     <input type="range" class="progress-bar-range" value="0" min="0" max="100" step="1">
                     <div class="progress-bar-time">
-                        <div class="current-time"></div>
-                        <div>/</div>
-                        <div class="duration-time"></div>
+                        <div class="current-time">00:00</div>
+                        <div class="duration-time">03:00</div>
                     </div>
                 </div>
             </div>
             <div class="buttons-container">
                 <div class="prew-btn"></div>
-                <div class="play-btn pause"></div>
+                <div class="play-btn"></div>
                 <div class="next-btn"></div>
             </div>
             <hr>
@@ -42,6 +46,6 @@
         </div>
 
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
