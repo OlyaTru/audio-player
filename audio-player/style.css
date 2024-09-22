@@ -1,1 +1,129 @@
-{\rtf1}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.wrapper-body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/main-background.jpg);
+}
+
+.player {
+    max-width: 400px;
+    width: 100%;
+    background-color: rgb(38, 37, 36);
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-title {
+    color: #f2de2f;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: #b72c27;
+    border-color: #b72c27;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.song-img {
+    width: 90%;
+    height: 200px;
+    border-radius: 0.5rem;
+    background-image: url(img/next-semestr-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.artist-name,
+.song-name {
+    color: #f2de2f;
+}
+
+.artist-name {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.song-name {
+    font-size: 0.8rem;
+}
+
+.buttons-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.prew-btn {
+    width: 50px;
+    height: 50px;
+    background-image: url(img/prew-button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.play-btn {
+    width: 70px;
+    height: 70px;
+    background-image: url(img/play-button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.next-btn {
+    width: 50px;
+    height: 50px;
+    background-image: url(img/next-button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer {
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+    color: #f2de2f;
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+}
+
+.container-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-footer > p {
+    color: #f2de2f;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+}
+
+.rs-school-logo {
+    width: 2.1rem;
+}
+
