@@ -17,9 +17,15 @@ const allSongsImg = ['img/next-semestr-img.jpg',
 
 let isPlay = false;
 let playNum = 0;
+let mouseDownOnSlider = false;
+
+audio.currentTime = 0;
+
+window.addEventListener("load", () => {
+    setProgresTime();
+});
 
 function play() {
-    audio.currentTime = 0;
     audio.play();
     isPlay = true;
 }
@@ -33,6 +39,7 @@ function playNext() {
     playNum += 1;
     if(playNum > (allSongs.length - 1)) {playNum = 0}
     changeInfo();
+    audio.currentTime = 0;
     play();
 }
 
@@ -40,6 +47,7 @@ function playPrew() {
     playNum -= 1;
     if(playNum < 0) {playNum = allSongs.length - 1}
     changeInfo();
+    audio.currentTime = 0;
     play();
 }
 
@@ -50,14 +58,51 @@ function changeInfo() {
     playButton.classList.add('pause');
 }
 
+function getTimeFromNum(num) {
+    let seconds = parseInt(num);
+    let minutes = parseInt(seconds / 60);
+    seconds = seconds - minutes * 60;
+    if(seconds < 10) {seconds = '0' + seconds}
+    return `0${minutes}:${seconds}`;
+}
+
+function setProgresTime() {
+    currentTime.innerHTML = getTimeFromNum(audio.currentTime);
+    durationTime.innerHTML = getTimeFromNum(audio.duration);
+}
+
 playButton.addEventListener('click', () => {
     playButton.classList.toggle('pause');
     (!isPlay) ? play() : pause();
-})
+});
 
 nextButton.addEventListener('click', playNext);
 
 prewButton.addEventListener('click', playPrew);
 
-audio.addEventListener("ended", playNext);
+audio.addEventListener('loadeddata', () => {
+    progressBar.value = 0;
+    setProgresTime();
+})
 
+audio.addEventListener('ended', playNext);
+
+audio.addEventListener("timeupdate", () => {
+    if (!mouseDownOnSlider) {
+        progressBar.value = audio.currentTime / audio.duration * 100;
+        setProgresTime();
+    }
+});
+
+progressBar.addEventListener('change', () => {
+    const onePart = progressBar.value / 100;
+    audio.currentTime = (audio.duration || 0) * onePart;
+})
+
+progressBar.addEventListener("mousedown", () => {
+    mouseDownOnSlider = true;
+});
+
+progressBar.addEventListener("mouseup", () => {
+    mouseDownOnSlider = false;
+});
