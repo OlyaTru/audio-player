@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+    <div class="wrapper-body">
+        <div class="player">
+            <h1 class="player-title">Clancy Player</h1>
+            <hr>
+            <div class="song-img"></div>
+            <div class="artist-name">Twenty One Pilots</div>
+            <div class="song-name">Next Semestr</div>
+            <audio class="current-song" src="music/next-semestr.mp3">
+                <source src="music/next-semestr.mp3" type="audio/mp3">
+                <source src="music/lavish.mp3" type="audio/mp3">
+                <source src="music/midwest-indigo.mp3" type="audio/mp3">
+            </audio>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <input type="range" class="progress-bar-range" value="0" min="0" max="100" step="1">
+                    <div class="progress-bar-time">
+                        <div class="current-time"></div>
+                        <div class="duration-time"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <div class="prew-btn"></div>
+                <div class="play-btn"></div>
+                <div class="next-btn"></div>
+            </div>
+            <hr>
+            <footer>
+                <div class="container-footer">
+                    <a class="my-github" href="https://github.com/OlyaTru" target="_blank">OlyaTru</a>
+                    <p>2024</p>
+                    <a class="rs-school-logo" href="https://rs.school/courses/javascript-preschool-ru" target="_blank">
+                        <img src="img/rss-logo.svg" alt="RSSchool logo">
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
